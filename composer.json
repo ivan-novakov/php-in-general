@@ -1,0 +1,21 @@
+{
+    "name" : "ivan-novakov/php-in-general",
+    "type" : "library",
+    "description" : "Common PHP classes to be used mostly with ZF2",
+    "homepage" : "https://github.com/ivan-novakov/php-in-general",
+    "license" : "http://debug.cz/license/freebsd",
+    "authors" : [
+        {
+            "name" : "Ivan Novakov"
+        }
+    ],
+    "require" : {
+        "php" : ">=5.3.0",
+        "zendframework/zendframework" : "2.*"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "InGeneral" : "src"
+        }
+    }
+}
