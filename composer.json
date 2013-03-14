@@ -3,7 +3,7 @@
     "type" : "library",
     "description" : "Common PHP classes to be used mostly with ZF2",
     "homepage" : "https://github.com/ivan-novakov/php-in-general",
-    "license" : "http://debug.cz/license/freebsd",
+    "license" : "FreeBSD",
     "authors" : [
         {
             "name" : "Ivan Novakov"
