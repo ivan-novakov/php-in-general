@@ -6,7 +6,8 @@
     "license" : "FreeBSD",
     "authors" : [
         {
-            "name" : "Ivan Novakov"
+            "name" : "Ivan Novakov",
+            "homepage" : "http://novakov.cz/"
         }
     ],
     "require" : {
@@ -15,7 +16,10 @@
     },
     "autoload" : {
         "psr-0" : {
-            "InGeneral" : "src"
-        }
+            "InGeneral\\" : "src/"
+        },
+        "classmap" : [
+            "Module.php"
+        ]
     }
 }
