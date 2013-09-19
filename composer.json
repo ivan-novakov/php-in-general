@@ -25,9 +25,6 @@
     "autoload" : {
         "psr-0" : {
             "InGeneral\\" : "src/"
-        },
-        "classmap" : [
-            "Module.php"
-        ]
+        }
     }
 }
