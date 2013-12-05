@@ -8,7 +8,7 @@ use InGeneral\Exception\UndefinedClassException;
 /**
  * Factory class for creating generic objects.
  */
-class ClassWithOptionsGenericFactory
+abstract class ClassWithOptionsGenericFactory
 {
 
 
@@ -20,7 +20,7 @@ class ClassWithOptionsGenericFactory
      * @throws Exception\UndefinedClassException
      * @return mixed
      */
-    public function createInstance($className, array $options = array())
+    protected function createInstance($className, array $options = array())
     {
         if (! class_exists($className)) {
             throw new UndefinedClassException($className);

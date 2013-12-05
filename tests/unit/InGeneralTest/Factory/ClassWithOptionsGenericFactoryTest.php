@@ -5,6 +5,17 @@ namespace InGeneralTest\Factory;
 use InGeneral\Factory\ClassWithOptionsGenericFactory;
 
 
+class FactoryImplementation extends ClassWithOptionsGenericFactory
+{
+
+
+    public function createObject($className, array $options = array())
+    {
+        return $this->createInstance($className, $options);
+    }
+}
+
+
 class ClassWithOptionsGenericFactoryTest extends \PHPUnit_Framework_TestCase
 {
 
@@ -15,17 +26,17 @@ class ClassWithOptionsGenericFactoryTest extends \PHPUnit_Framework_TestCase
         
         $className = 'FooClass';
         
-        $factory = new ClassWithOptionsGenericFactory();
-        $factory->createInstance($className);
+        $factory = new FactoryImplementation();
+        $factory->createObject($className);
     }
 
 
     public function testCreateInstance()
     {
-        $className = 'InGeneral\Factory\ClassWithOptionsGenericFactory';
+        $className = 'InGeneralTest\Factory\FactoryImplementation';
         
-        $factory = new ClassWithOptionsGenericFactory();
-        $instance = $factory->createInstance($className);
+        $factory = new FactoryImplementation();
+        $instance = $factory->createObject($className);
         
         $this->assertInstanceOf($className, $instance);
     }
